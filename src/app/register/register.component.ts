@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
     this.user.tipo = this.tipoUsuario
 
     if (this.user.senha != this.confirmSenha) {
-      alert("As senhas não estão semelhantes.")
+      alert("As senhas não são semelhantes.")
     } else {
       this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp

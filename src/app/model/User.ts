@@ -4,7 +4,7 @@ export class User {
     public id: number
     // public (property) User.login: string
     public nome: string
-    public usuario: string
+    public login: string
     public senha: string
     public foto: string
     public tipo: string

@@ -9,13 +9,19 @@
           <div class="form-group">
             <label for="nome">Nome</label>
             <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome"
-              placeholder="Digite seu nome completo">
+              placeholder="Digite seu nome">
           </div>
 
           <div class="form-group">
             <label for="usuario">Usuário</label>
-            <input [(ngModel)]='user.usuario' class="form-control" type="text" name="usario" id="usuario"
-              placeholder="Digite seu usuário">
+            <input [(ngModel)]='user.login' class="form-control" type="text" name="usario" id="usuario"
+              placeholder="Digite um Email">
+          </div>
+
+          <div class="form-group">
+            <label for="dataNascimento">Data de Nascimento</label>
+            <input [(ngModel)]='user.dataNascimento' class="form-control" type="date" name="dataNascimento"
+              id="dataNascimento">
           </div>
 
           <div class="form-group">
