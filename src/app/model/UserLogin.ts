@@ -1,8 +1,8 @@
 export class UserLogin {
-    public nome: String
-    public login: String
-    public senha: String
-    public token: String
-    public foto: String
-    public tipo: String
+    public nome: string
+    public login: string
+    public senha: string
+    public token: string
+    public foto: string
+    public tipo: string
 }

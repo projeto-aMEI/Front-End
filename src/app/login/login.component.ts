@@ -1,8 +1,8 @@
-import { environment } from 'src/environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 import { UserLogin } from '../model/UserLogin';
 import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-login',
@@ -27,17 +27,17 @@ export class LoginComponent implements OnInit {
 
       this.userLogin = resp
 
-      // environment.token = this.userLogin.token
-      // environment.nome = this.userLogin.nome
-      // environment.foto = this.userLogin.foto
+      environment.token = this.userLogin.token
+      environment.nome = this.userLogin.nome
+      environment.foto = this.userLogin.foto
 
       console.log(environment.token)
       console.log(environment.nome)
       console.log(environment.foto)
 
-      this.router.navigate(['/start'])
+      this.router.navigate(['/home'])
     }, erro => {
-      if (erro.status == 500) {
+      if (erro.status == 401) {
         alert("Usuário ou senha estão incorretos!")
       }
     })
