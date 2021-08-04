@@ -19,7 +19,19 @@ export class ThemeService {
     return this.http.get<Theme[]>('https://blogcplus.herokuapp.com/tema', this.token)
   }
 
+  getByIdTheme(id: number): Observable<Theme> {
+    return this.http.get<Theme>(`https://blogcplus.herokuapp.com/tema/${id}`, this.token)
+  }
+
   postTheme(theme: Theme): Observable<Theme> {
     return this.http.post<Theme>('https://blogcplus.herokuapp.com/tema', theme, this.token)
+  }
+
+  putTheme(theme: Theme): Observable<Theme> {
+    return this.http.put<Theme>('https://blogcplus.herokuapp.com/tema', theme, this.token)
+  }
+
+  deleteTheme(id: number) {
+    return this.http.delete(`https://blogcplus.herokuapp.com/tema/${id}`, this.token)
   }
 }
