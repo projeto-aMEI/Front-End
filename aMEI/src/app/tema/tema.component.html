@@ -1,0 +1,44 @@
+<app-menu></app-menu>
+<div class="col-md-12"><!-- inicia posicionamento dos elementos -->
+    <button class="btn btn-light text-warning mr-2 font-weight-bold" data-toggle="modal"
+        data-target="#novaPostagem">Novo Tema</button><!--inicia e fecha o botao do modal-->
+    <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+        aria-hidden="true"><!--inicia modal-->
+        <div class="modal-dialog modal-dialog-centered" role="document"><!--inicia opçoes do modal-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="titulo">Titulo</label>
+                        <input type="text" class="form-control" name="titulo" id="" placeholder="Digite o titulo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="texto">Texto</label>
+                        <textarea class="form-control" name="texto" id="texto" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tema">Escolha um tema ou <a routerLink='/theme' data-dismiss="modal">cadastre um
+                                novo</a>:</label>
+                        <select class="form-control" name="tema" id="tema"><!--inicia opçoes de tema-->
+                            <option value="">Temas</option>
+                        </select><!--fecha opçoes de tema-->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-warning">Publicar</button>
+                </div>
+            </div>
+        </div><!--fecha opçoes do modal-->
+    </div><!--fecha modal-->
+
+    <app-contato></app-contato>
+    <app-rodape></app-rodape>
+</div> <!-- fecha posicionamento dos elementos -->
