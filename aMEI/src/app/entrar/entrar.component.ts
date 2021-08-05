@@ -19,18 +19,24 @@ export class EntrarComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit(){
-    window.scroll(0,0)
+  ngOnInit() {
+
+    if (environment.token == '') {
+      alert('Sua sessão expirou, faça login novamente')
+      this.router.navigate(['/entrar'])
+    }
+
+    window.scroll(0, 0)
   }
 
-  entrar(){
-    this.authService.entrar(this.userLogin).subscribe((resp: UserLogin)=>{
-      this.userLogin= resp
+  entrar() {
+    this.authService.entrar(this.userLogin).subscribe((resp: UserLogin) => {
+      this.userLogin = resp
 
-      environment.token= this.userLogin.token
-      environment.nome= this.userLogin.nome
-      environment.foto= this.userLogin.foto
-      environment.id= this.userLogin.id
+      environment.token = this.userLogin.token
+      environment.nome = this.userLogin.nome
+      environment.foto = this.userLogin.foto
+      environment.id = this.userLogin.id
 
       console.log(environment.token)
 
@@ -42,8 +48,8 @@ export class EntrarComponent implements OnInit {
 
 
       this.router.navigate(['/inicio'])
-    }, erro=>{
-      if(erro.status == 500){
+    }, erro => {
+      if (erro.status == 500) {
         alert('Usuário ou senha estão incorretos!')
       }
     })

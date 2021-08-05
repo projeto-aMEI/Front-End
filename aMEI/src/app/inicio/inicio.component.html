@@ -1,1 +1,160 @@
-<p>inicio works!</p>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<!--Nav-->
+<nav class="navbar navbar-expand-lg navbar-light shadow p-3 mb-5 bg-white">
+  <a class="navbar-brand" href="#"><img src="../../assets/7a0a3056-5816-4093-b522-b4fa1ad058c5-removebg-preview.png"
+      alt="" srcset="" height="56px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+    aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home <span class="sr-only">(página
+            atual)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Dicas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../contato/contato.component.html/#contato"><i class="fa fa-phone"
+            aria-hidden="true"></i> Contato</a>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0 ml-3">
+      <button class="btn btn-exit my-2 my-sm-0 " type="submit" routerLink='/entrar'><i class="fa fa-sign-out"
+          aria-hidden="true"></i> Sair</button>
+    </form>
+  </div>
+</nav>
+
+
+
+
+
+<div id="item-body" class="item-body">
+  <div class="row">
+    <div class="col-lg-3 profile-col-aside left">
+      <aside class="widget-area profile-widget-area displayed-profile-info">
+        <div class="widget">
+          <!-- Section: Personal card -->
+          <section class="my-5">
+
+            <!-- Grid row -->
+            <div class="row">
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-10">
+
+                <!-- Card -->
+                <div class="card card-personal">
+
+                  <!-- Card image-->
+                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(29).jpg"
+                    alt="Card image cap">
+                  <!-- Card image-->
+
+                  <!-- Card content -->
+                  <div class="card-body">
+                    <!-- Title-->
+                    <a>
+                      <h4 class="card-title title-one">NOME DA PESSOA</h4>
+                    </a>
+                    <p class="card-meta">Joined in 2013</p>
+                    <!-- Text -->
+                    <p class="card-text">DESCRIÇÃO Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                      laudantium cumque veritatis corporis. Amet sequi quos blanditiis unde nulla eos ab, enim optio
+                      voluptatem velit sed facere ad doloremque ullam?</p>
+                    <hr>
+                  </div>
+                  <!-- Card content -->
+
+                </div>
+                <!-- Card -->
+
+              </div>
+              <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+          </section>
+          <!-- Section: Personal card -->
+        </div>
+
+      </aside>
+    </div>
+    <div class="col-lg-6 profile-col-main">
+      <div class="panel">
+        <div class="panel-body">
+          <textarea class="form-control" rows="2" placeholder="Fala amadah"></textarea>
+          <div class="mar-top clearfix">
+            <button class="btn btn-sm btn-primary pull-right" type="submit"><i
+                class="fa fa-pencil fa-fw"></i>Postar</button>
+            <div class="select-wrap">
+              <button class="btn btn-warning" routerLink='/tema'>Cadastrar Tema</button>
+              <select id="activity-filter-by" data-bp-filter="activity">
+
+                <option value="0">— Tema —</option>
+                <option value="">Adm</option>
+                <option value="">Economia</option>
+                <option value="">Updates</option>
+                <option value="">Updates</option>
+                <option value="">Updates</option>
+
+              </select>
+              <span class="select-arrow" aria-hidden="true"></span>
+            </div>
+            <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
+          </div>
+        </div>
+      </div>
+      <!-- Newsfeed Content -->
+      <!--===================================================-->
+      <div class="media-block pad-all">
+        <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture"
+            src="https://bootdey.com/img/Content/avatar/avatar1.png"></a>
+        <div class="media-body">
+          <div class="mar-btm">
+            <a href="#" class="btn-link text-semibold media-heading box-inline">John Doe</a>
+            <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
+          </div>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <img class="img-responsive thumbnail" src="https://via.placeholder.com/400x300" alt="Image">
+          <div class="pad-ver">
+            <span class="tag tag-sm"><i class="fa fa-heart text-danger"></i> 250 Likes</span>
+            <div class="btn-group">
+              <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+              <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+            </div>
+          </div>
+          <hr>
+
+          <!-- Newsfeed Content -->
+          <!--===================================================-->
+          <div class="media-block pad-all">
+            <a class="media-left" href="#"><img class="img-circle img-sm" alt="Profile Picture"
+                src="https://bootdey.com/img/Content/avatar/avatar1.png"></a>
+            <div class="media-body">
+              <div class="mar-btm">
+                <a href="#" class="btn-link text-semibold media-heading box-inline">John Doe</a>
+                <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <img class="img-responsive thumbnail" src="https://via.placeholder.com/400x300" alt="Image">
+              <div class="pad-ver">
+                <span class="tag tag-sm"><i class="fa fa-heart text-danger"></i> 250 Likes</span>
+                <div class="btn-group">
+                  <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                  <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                </div>
+              </div>
+              <hr>
+
+            </div>
+          </div>
+          <app-rodape></app-rodape>
