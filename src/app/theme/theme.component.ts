@@ -28,18 +28,18 @@ export class ThemeComponent implements OnInit {
     this.findAllThemes()
   }
 
+  findAllThemes() {
+    this.themeService.getAllTheme().subscribe((resp: Theme[]) => {
+      this.listaTema = resp
+    })
+  }
+
   cadastrar() {
     this.themeService.postTheme(this.tema).subscribe((resp: Theme) => {
       this.tema = resp
       alert("Tema cadastrado com sucesso!")
       this.findAllThemes()
       this.tema = new Theme()
-    })
-  }
-
-  findAllThemes() {
-    this.themeService.getAllTheme().subscribe((resp: Theme[]) => {
-      this.listaTema = resp
     })
   }
 
