@@ -14,6 +14,10 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
+  getByIdUser(id: number): Observable<User> {
+    return this.http.get<User>(`https://blogcplus.herokuapp.com/usuario/${id}`)
+  }
+
   entrar(userLogin: UserLogin): Observable<UserLogin> {
     return this.http.post<UserLogin>('https://blogcplus.herokuapp.com/usuario/logar', userLogin)
   }
