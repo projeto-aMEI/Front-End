@@ -27,6 +27,11 @@ export class InicioComponent implements OnInit {
   user: User = new User()
   idUser = environment.id
 
+  //id para o user.edit
+  id = environment.id
+
+
+
   //Dados usuario do card
   nome = environment.nome
   foto = environment.foto

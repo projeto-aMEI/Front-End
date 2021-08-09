@@ -7,7 +7,7 @@ export class Postagem{
   public hashtag: string;
   public imgpost: string;
   public titulo: string;
-  public data: Date;
+  public date: Date;
   public curtidas: number;
   public usuario: User;
   public tema: Tema; //temos 1 tema para varias postagens relação OneToMany

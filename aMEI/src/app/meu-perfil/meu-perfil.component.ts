@@ -49,6 +49,7 @@ export class MeuPerfilComponent implements OnInit {
   }
   this.getAllTemas()
   this.getAllPostagens()
+  this.findByIdUser()
   }
 
   getAllTemas(){

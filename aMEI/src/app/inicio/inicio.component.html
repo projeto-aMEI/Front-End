@@ -3,7 +3,7 @@
 
 <!--Nav-->
 <nav class="navbar navbar-expand-lg navbar-light shadow p-3 bg-white">
-  <a class="navbar-brand" href="#"><img src="../../assets/7a0a3056-5816-4093-b522-b4fa1ad058c5-removebg-preview.png"
+  <a class="navbar-brand" href="#"><img src=""
       alt="" srcset="" height="56px"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
     aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
@@ -41,7 +41,7 @@
               <ul class="list-group list-group-flush">
                   <li class="list-group-item"><a routerLink='/meuPerfil'><i class="fa fa-user" aria-hidden="true"></i>
                     Meu perfil</a></li>
-                  <li class="list-group-item"><a routerLink='/user-edit'><i class="fa fa-cog" aria-hidden="true"></i> Editar perfil</a></li>
+                  <li class="list-group-item"><a [routerLink]="['/user-edit', id]"><i class="fa fa-cog" aria-hidden="true"></i> Editar perfil</a></li>
                   <li class="list-group-item">Vestibulum at eros</li>
               </ul>
           </div>
@@ -70,8 +70,8 @@
               </div>
           </div>
           <div *ngFor='let item of listaPostagens' class="card d-flex p-3 mt-5 rounded" style="width: 100rem;">
-              <h5 class="card-title">{{item.usuario.nome}}</h5>
-              <p class="card-text"><small class="text-muted">{{item.data}}</small></p>
+              <h5 class="card-title"></h5>
+              <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</small></p>
               <p class="card-text"><small class="text-muted">{{item.tema.descricao}}</small></p>
               <img class="card-img-top" src="{{item.imgpost}}"   alt="Imagem de capa do card">
               <div class="card-body">
