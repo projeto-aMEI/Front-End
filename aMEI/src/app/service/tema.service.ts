@@ -21,6 +21,7 @@ export class TemaService {
     return this.http.get<Tema[]>('https://amei3.herokuapp.com/temas', this.token)
   }
 
+
   getByIdTema(id: number): Observable<Tema> {
     return this.http.get<Tema>(`https://amei3.herokuapp.com/temas/${id}`, this.token)
   }
