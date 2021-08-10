@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class HeaderComponent implements OnInit {
 
+  id = environment.id
   nome = environment.nome
   foto = environment.foto
 

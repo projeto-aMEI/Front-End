@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  user: User = new User
-  confirmSenha: string
+  usuario: User = new User
+  confirmaSenha: string
   tipoUsuario: string
 
   constructor(
@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
   }
 
   confirmarSenha(event: any) {
-    this.confirmSenha = event.target.value
+    this.confirmaSenha = event.target.value
   }
 
   permissao(event: any) {
@@ -33,13 +33,13 @@ export class RegisterComponent implements OnInit {
   }
 
   cadastrar() {
-    this.user.tipo = this.tipoUsuario
+    this.usuario.tipo = this.tipoUsuario
 
-    if (this.user.senha != this.confirmSenha) {
+    if (this.usuario.senha != this.confirmaSenha) {
       alert("As senhas não são semelhantes.")
     } else {
-      this.authService.cadastrar(this.user).subscribe((resp: User) => {
-        this.user = resp
+      this.authService.cadastrar(this.usuario).subscribe((resp: User) => {
+        this.usuario = resp
         this.router.navigate(['/login'])
         alert("Usuário cadastrado com sucesso!")
       })
