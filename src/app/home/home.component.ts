@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Post } from '../model/Post';
 import { Theme } from '../model/Theme';
 import { User } from '../model/User';
+import { AlertsService } from '../service/alerts.service';
 import { AuthService } from '../service/auth.service';
 import { PostageService } from '../service/postage.service';
 import { ThemeService } from '../service/theme.service';
@@ -20,24 +21,30 @@ export class HomeComponent implements OnInit {
   usuario: User = new User()
 
   listarPostagens: Post[]
+  tituloPostagem: string
 
   listarTemas: Theme[]
   idTema: number
+  tituloTema: string
 
   idUsario = environment.id
+
+  key = 'data'
+  reverse = true
 
   constructor(
     private router: Router,
     private postageService: PostageService,
     private themeService: ThemeService,
     private authService: AuthService,
+    private alerts: AlertsService,
   ) { }
 
   ngOnInit() {
     window.scroll(0, 0)
 
     if (environment.token == '') {
-      alert("Sua sessão expirou, faça o login novamente")
+      this.alerts.showAlertInfo("Sua sessão expirou, faça o login novamente")
       this.router.navigate(['/login'])
     }
 
@@ -63,6 +70,26 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  findByTitlePost() {
+    if (this.tituloPostagem == '') {
+      this.getAllPostages()
+    } else {
+      this.postageService.getByTitlePost(this.tituloPostagem).subscribe((resp: Post[]) => {
+        this.listarPostagens = resp
+      })
+    }
+  }
+
+  findByTheme() {
+    if (this.tituloTema == '') {
+      this.getAllThemes()
+    } else {
+      this.themeService.getByTheme(this.tituloTema).subscribe((resp: Theme[]) => {
+        this.listarTemas = resp
+      })
+    }
+  }
+
   getAllPostages() {
     this.postageService.getAllPostages().subscribe((resp: Post[]) => {
       this.listarPostagens = resp
@@ -79,7 +106,7 @@ export class HomeComponent implements OnInit {
 
     this.postageService.postPostage(this.postagem).subscribe((resp: Post) => {
       this.postagem = resp
-      alert('Postagem realizada com sucesso!')
+      this.alerts.showAlertSuccess('Postagem realizada com sucesso!')
 
       this.postagem = new Post()
       this.getAllPostages()

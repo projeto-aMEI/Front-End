@@ -23,6 +23,10 @@ export class ThemeService {
     return this.http.get<Theme>(`https://blogcplus.herokuapp.com/tema/${id}`)
   }
 
+  getByTheme(theme: string): Observable<Theme[]> {
+    return this.http.get<Theme[]>(`https://blogcplus.herokuapp.com/tema/descricao/${theme}`)
+  }
+
   postTheme(theme: Theme): Observable<Theme> {
     return this.http.post<Theme>('https://blogcplus.herokuapp.com/tema', theme)
   }

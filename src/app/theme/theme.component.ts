@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Theme } from '../model/Theme';
+import { AlertsService } from '../service/alerts.service';
 import { ThemeService } from '../service/theme.service';
 
 @Component({
@@ -16,13 +17,18 @@ export class ThemeComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private alerts: AlertsService,
   ) { }
 
   ngOnInit() {
     if (environment.token == '') {
       alert("Sua sessão expirou, faça o login novamente")
       this.router.navigate(['/login'])
+    }
+
+    if (environment.tipo != 'adm') {
+      this.alerts.showAlertInfo("Você não possue permissão para cadastrar um novo tema!")
     }
 
     this.findAllThemes()

@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -17,6 +19,7 @@ import { ThemeDeleteComponent } from './delete/theme-delete/theme-delete.compone
 import { PostageEditComponent } from './edit/postage-edit/postage-edit.component';
 import { PostageDeleteComponent } from './delete/postage-delete/postage-delete.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { AlertsComponent } from './alerts/alerts.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +34,16 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
     ThemeDeleteComponent,
     PostageEditComponent,
     PostageDeleteComponent,
-    UserEditComponent
+    UserEditComponent,
+    AlertsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot(),
+    OrderModule,
   ],
   providers: [{
     provide: LocationStrategy,

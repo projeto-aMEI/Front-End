@@ -36,6 +36,16 @@ export class AuthService {
     return ok
   }
 
+  adm() {
+    let ok = false
+
+    if (environment.tipo == 'adm') {
+      ok = true
+    }
+
+    return ok
+  }
+
   atualizar(user: User): Observable<User> {
     return this.http.put<User>('https://blogcplus.herokuapp.com/usuario/alterar', user)
   }
