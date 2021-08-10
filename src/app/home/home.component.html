@@ -70,6 +70,12 @@
             <p>{{item.tema.descricao}}</p>
             <p>{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</p>
 
+            <button type="button" class="btn btn-outline-success mr-3"
+              [routerLink]="['/postage-edit', item.id]">Editar</button>
+
+            <button type="button" class="btn btn-outline-danger"
+              [routerLink]="['/postage-delete', item.id]">Apagar</button>
+
           </div>
         </div>
       </div>
@@ -83,12 +89,11 @@
           <h6 class="card-subtitle mb-2 text-muted">{{item.usuario.nome}}</h6>
           <p class="card-text">{{item.texto}}</p>
           <p>{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</p>
-          <button type="button" class="btn btn-outline-success mr-3">Editar</button>
-          <button type="button" class="btn btn-outline-danger">Apagar</button>
 
         </div>
       </div>
     </div>
+
   </div>
 </div>
 

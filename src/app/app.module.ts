@@ -13,7 +13,9 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ThemeComponent } from './theme/theme.component';
 import { ThemeEditComponent } from './edit/theme-edit/theme-edit.component';
-import { ThemeDeleteComponent } from './edit/theme-delete/theme-delete.component';
+import { ThemeDeleteComponent } from './delete/theme-delete/theme-delete.component';
+import { PostageEditComponent } from './edit/postage-edit/postage-edit.component';
+import { PostageDeleteComponent } from './delete/postage-delete/postage-delete.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ThemeDeleteComponent } from './edit/theme-delete/theme-delete.component
     HomeComponent,
     ThemeComponent,
     ThemeEditComponent,
-    ThemeDeleteComponent
+    ThemeDeleteComponent,
+    PostageEditComponent,
+    PostageDeleteComponent
   ],
   imports: [
     BrowserModule,
