@@ -1,0 +1,13 @@
+.bg-laranja {
+  background-color:#FFB42C  !important;
+  border-color: #f6a714!important;
+}
+
+.text-laranja {
+  color:#FFB42C;
+
+}
+
+.circle {
+  border-radius: 50px;
+}
