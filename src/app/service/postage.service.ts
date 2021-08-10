@@ -18,10 +18,10 @@ export class PostageService {
   }
 
   getAllPostages(): Observable<Post[]> {
-    return this.http.get<Post[]>('https://blogcplus.herokuapp.com/postagens', this.token)
+    return this.http.get<Post[]>('https://blogcplus.herokuapp.com/postagens')
   }
 
   postPostage(postagem: Post): Observable<Post> {
-    return this.http.post<Post>('https://blogcplus.herokuapp.com/postagens', postagem, this.token)
+    return this.http.post<Post>('https://blogcplus.herokuapp.com/postagens', postagem)
   }
 }

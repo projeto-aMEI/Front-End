@@ -59,37 +59,37 @@
 
     </div>
 
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Profile</div>
-    <div class="card-columns">
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <div class="card-columns">
 
-      <div class="card" style="width: 18rem;" *ngFor='let item of usuario.postagem'>
-        <div class="card-body">
+        <div class="card" style="width: 18rem;" *ngFor='let item of usuario.postagem'>
+          <div class="card-body">
 
-          <h5 class="card-title">{{item.titulo}}</h5>
-          <p class="card-text">{{item.texto}}</p>
-          <p>{{item.tema.descricao}}</p>
-          <p>{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</p>
+            <h5 class="card-title">{{item.titulo}}</h5>
+            <p class="card-text">{{item.texto}}</p>
+            <p>{{item.tema.descricao}}</p>
+            <p>{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</p>
 
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Contact</div>
-    <div class="card" style="width: 18rem;" *ngFor='let item of tema.postagem'>
-      <div class="card-body">
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+      <div class="card" style="width: 18rem;" *ngFor='let item of tema.postagem'>
+        <div class="card-body">
 
-        <h5 class="card-title">{{item.titulo}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{item.usuario.nome}}</h6>
-        <p class="card-text">{{item.texto}}</p>
-        <p>{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</p>
-        <button type="button" class="btn btn-outline-success mr-3">Editar</button>
-        <button type="button" class="btn btn-outline-danger">Apagar</button>
+          <h5 class="card-title">{{item.titulo}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{item.usuario.nome}}</h6>
+          <p class="card-text">{{item.texto}}</p>
+          <p>{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</p>
+          <button type="button" class="btn btn-outline-success mr-3">Editar</button>
+          <button type="button" class="btn btn-outline-danger">Apagar</button>
 
+        </div>
       </div>
     </div>
   </div>
-
-</div>
 </div>
 
 <!-- Modal -->
@@ -121,6 +121,7 @@
             <option *ngFor='let item of listarTemas' value="{{item.id}}">{{item.descricao}}</option>
           </select>
         </div>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
