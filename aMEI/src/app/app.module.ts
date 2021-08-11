@@ -24,6 +24,7 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { DicasComponent } from './dicas/dicas.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { AlertasComponent } from './alertas/alertas.component';
     PostagemEditComponent,
     MeuPerfilComponent,
     UserEditComponent,
-    AlertasComponent
+    AlertasComponent,
+    DicasComponent
   ],
   imports: [
     BrowserModule,
