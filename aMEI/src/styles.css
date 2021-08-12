@@ -1,13 +1,22 @@
 .bg-laranja {
-  background-color:#FFB42C  !important;
-  border-color: #f6a714!important;
+  background-color:#E09E27  !important;
+  border-color: #E09E27 !important;
 }
 
 .text-laranja {
-  color:#FFB42C;
+  color:#E09E27;
 
 }
 
 .circle {
   border-radius: 50px;
+}
+
+input, button, select {
+  border-radius: 100px !important;
+}
+
+textarea {
+  padding: 18px !important;
+  border-radius: 16px !important;
 }

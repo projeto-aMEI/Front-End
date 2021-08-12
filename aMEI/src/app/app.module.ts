@@ -24,7 +24,11 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
+<<<<<<< Updated upstream
 import { DicasComponent } from './dicas/dicas.component';
+=======
+import { MenuFeedComponent } from './menu-feed/menu-feed.component';
+>>>>>>> Stashed changes
 
 
 @NgModule({
@@ -45,7 +49,11 @@ import { DicasComponent } from './dicas/dicas.component';
     MeuPerfilComponent,
     UserEditComponent,
     AlertasComponent,
+<<<<<<< Updated upstream
     DicasComponent
+=======
+    MenuFeedComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
