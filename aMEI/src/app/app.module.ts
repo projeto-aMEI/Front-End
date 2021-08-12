@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { OrderModule } from 'ngx-order-pipe';
-
-
 
 import { AppComponent } from './app.component';
 import { RodapeComponent } from './rodape/rodape.component';
@@ -24,12 +22,8 @@ import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.compon
 import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
-<<<<<<< Updated upstream
 import { DicasComponent } from './dicas/dicas.component';
-=======
 import { MenuFeedComponent } from './menu-feed/menu-feed.component';
->>>>>>> Stashed changes
-
 
 @NgModule({
   declarations: [
@@ -49,11 +43,8 @@ import { MenuFeedComponent } from './menu-feed/menu-feed.component';
     MeuPerfilComponent,
     UserEditComponent,
     AlertasComponent,
-<<<<<<< Updated upstream
+    MenuFeedComponent,
     DicasComponent
-=======
-    MenuFeedComponent
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,

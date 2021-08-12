@@ -1,6 +1,4 @@
 
-<!DOCTYPE html>
-<html>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,9 +28,9 @@ img {margin-bottom: -8px;}
 <div class="container">
   <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-between" style="color: rgb(75, 23, 124);">
-      <a class="p-2 " href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/quero-ser-mei">MEI</a>
+      <a class="p-2 " href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/quero-ser-mei" target="_blank">MEI</a>
       <a class="p-2" href="#quemsomos">Quem somos</a>
-      <a class="p-2" href="https://brazil.generation.org/">Generation Brasil</a>
+      <a class="p-2" href="https://brazil.generation.org/" target="_blank">Generation Brasil</a>
       <a class="p-2 " href="#contato">Contato</a>
     </nav>
   </div>
@@ -149,33 +147,44 @@ img {margin-bottom: -8px;}
 <app-contato></app-contato>
 <app-rodape></app-rodape>
 
-<!-- Modal -->
-<div class="modal fade" id="entrar"  role="dialog" aria-labelledby="exampleModalCenterTitle"
-aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="log" >
-  <div class="modal-content" >
-    <div style="background-image: url(../../assets/5253-morados.jpg);" id="modalentrar" >
-    <div class="modal-header d-flex justify-content-center">
-      <h2 class="mr-5 d-flex justify-content-center" id="exampleModalCenterTitle">Faça seu login</h2>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+<!-- Modal para o Login -->
+<div class="modal fade" id="entrar" role="dialog" aria-labelledby="modalLogin" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="log" >
+  
+    <div class="modal-content">
+      <div class="bg-white" id="modalentrar">
+    
+        <div class="row d-flex justify-content-center text-center">
+          <div class="col-md-8">
+            
+            <img height=50px width=50px src="https://i.imgur.com/qozI9AP.png" alt="Logo da rede social aMEI"
+              class="mt-5">
+            
+            <h2 class="mt-3" id="modalLogin">Faça seu Login</h2>
+        
+            <div class="modal-body">
+              <div class="form-group">
+                <input [(ngModel)]='userLogin.email' class="form-control" type="text" name="usario" id="usuario"
+                placeholder="Digite seu email">
+              </div>
+              
+              <div class="form-group">
+                <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" id="senha"
+                placeholder="Digite sua senha">
+              </div>
+              
+                <button type="submit" class="btn btn-success mr-4 form-control" (click)="entrar()" data-dismiss="modal" aria-label="Close">Entrar</button>
+               
+                <hr class="mt-5 mb-5">
+
+                <p class="text-center">
+                  Não tem uma conta?<a routerLink="/registrar" data-dismiss="modal"> Cadastre-se</a> já!
+                </p>
+            </div>
+          </div>
+        </div>
+
     </div>
-    <div class="modal-body">
-      <div class="form-group">
-        <input [(ngModel)]='userLogin.email' class="form-control" type="text" name="usario" id="usuario"
-        placeholder="Digite seu usuário">
-      </div>
-      <div class="form-group">
-        <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" id="senha"
-        placeholder="Digite sua senha">
-      </div>
 
-
-      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-      <button type="submit" class="btn btn-warning text-dark" (click)="entrar()" data-dismiss="" data-dismiss="modal" aria-label="Close">Entrar</button>
-    </div>
   </div>
-  </div>
-
 </div>

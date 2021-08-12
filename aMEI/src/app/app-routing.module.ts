@@ -11,65 +11,29 @@ import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
+import { DicasComponent } from './dicas/dicas.component';
 
 const routes: Routes = [
 
-  {
-    path: '',
-    redirectTo: 'entrar',
-    pathMatch: 'full'
-  },
+  { path: '', redirectTo: 'entrar', pathMatch: 'full' },
 
-  {
-    path: 'sobre-nos',
-    component: SobreNosComponent
-  },
-  {
-    path: 'entrar',
-    component: EntrarComponent
-  },
+  { path: 'sobre-nos', component: SobreNosComponent },
 
-  {
-    path: 'registrar',
-    component: RegistrarComponent
-  },
+  { path: 'entrar', component: EntrarComponent },
+  { path: 'registrar', component: RegistrarComponent },
 
-  {
-    path: 'inicio',
-    component: InicioComponent
-  },
+  { path: 'inicio', component: InicioComponent },
+  { path: 'tema', component: TemaComponent },
+  { path: 'meuPerfil', component: MeuPerfilComponent },
+  { path: 'dicas', component: DicasComponent },
 
-  {
-    path: 'tema',
-    component: TemaComponent
-  },
-  {
-    path: 'meuPerfil',
-    component: MeuPerfilComponent
-  },
+  { path: 'tema-edit/:id', component: TemaEditComponent },
+  { path: 'tema-delete/:id', component: TemaDeleteComponent },
 
-  {
-    path: 'tema-edit/:id',
-    component: TemaEditComponent
-  },
+  { path: 'postagem-delete/:id', component: PostagemDeleteComponent },
+  { path: 'postagem-edit/:id', component: PostagemEditComponent },
 
-  {
-    path: 'tema-delete/:id',
-    component: TemaDeleteComponent
-  },
-  {
-    path: 'postagem-delete/:id',
-    component: PostagemDeleteComponent
-  },
-  {
-    path: 'postagem-edit/:id',
-    component: PostagemEditComponent
-  },
-  {
-    path: 'user-edit/:id',
-    component: UserEditComponent
-  },
-
+  { path: 'user-edit/:id', component: UserEditComponent },
 
 ]
 
