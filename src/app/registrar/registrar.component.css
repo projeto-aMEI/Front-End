@@ -7,9 +7,9 @@
   background-size: cover;
 }
 
-.bg-cz {
+.bg-cz{
   background-color:#eee;
-
+  border-radius: 10px;
 }
 
 .bg-wh {
@@ -18,4 +18,14 @@
 
 .fs-18 {
   font-size: 25px;
+}
+#imgcad{
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.vantagens{
+  margin: auto;
 }
