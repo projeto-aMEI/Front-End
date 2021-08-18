@@ -12,31 +12,9 @@ img {margin-bottom: -8px;}
 .mySlides {display: none;}
 </style>
 
-<header class="blog-header py-4 ">
-  <div class="row flex-nowrap justify-content-between align-items-center">
-    <div class="col-4 pt-1" >
-    </div>
-    <div class="col-4 text-center align-items-center">
-      <a class="text-muted" href="#"><img src="../../assets/img/logo-svg.svg" alt="" height="55px" width="110px"></a>
-    </div>
-    <div class="col-4 d-flex justify-content-end align-items-center ">
-      <a class="btn btn-sm btn-outline-primary mr-4 fs-25" href="#" data-toggle="modal" data-target="#entrar">Entrar</a>
-    </div>
-  </div>
-</header>
+<app-menu></app-menu>
 
-<div class="container">
-  <div class="nav-scroller py-1 mb-2">
-    <nav class="nav d-flex justify-content-between" style="color: rgb(75, 23, 124);">
-      <a class="p-2" href="#quemsomos">Quem somos</a>
-      <a class="p-2 " href="#contato">Contato</a>
-      <a class="p-2" href="https://brazil.generation.org/" target="_blank">Generation Brasil</a>
-      <a class="p-2 " href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/quero-ser-mei" target="_blank">MEI</a>
-
-    </nav>
-  </div>
-</div>
-
+<div class="container-fluid">
   <div class="position-relative overflow-hidden p-md-2 m-md-2 text-center bg-transparent" id="FOTO">
   <div class="text-center bg-transparent" id="FOTO">
   <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
@@ -47,47 +25,54 @@ img {margin-bottom: -8px;}
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="row align-items-center container-fluid">
-          <div class="col-md-6">
-            <h2 class="w3"><b>Microempreendedor individual</b></h2>
-      <h1 class="w3-xlarge w3-text-blue"><b>O que é?</b></h1>
-      <p><span class="w3-xlarge">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <button class="w3-button w3-light-grey w3-padding-large w3-section w3-hide-small" routerLink='/registrar'>
-        <i class="fa fa-download"></i> Cadastre-se
-      </button>
+        <div class="row align-items-center container">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-5">
+            <h3 class="w3"><b>Microempreendedor individual</b></h3>
+      <h1 class="w3-text" style="color: darkorange;"><b>O que é?</b></h1>
+      <p><span class="w3-xlarge">Um profissional autônomo.</span> Quando você se cadastra como um MEI, você passa a ter CNPJ, ou seja, tem facilidades com a abertura de conta bancária, no pedido de empréstimos e na emissão de notas fiscais, além de ter obrigações e direitos de uma pessoa jurídica.</p>
+      <button class="b w3-button w3-light-grey w3-padding-large align-items-center" routerLink='/registrar' ><h4>Cadastre-se na aMEI 💜</h4></button>
       </div>
-      <div class="col-md-6">
-   <img src="../../assets/9hmb42mqugalaojcinuzbkgpq-removebg-preview.png" alt="Primeiro Slide" width="600px">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+   <img src="../../assets/Create-bro (1).png" alt="Primeiro Slide" width="600px">
       </div>
     </div>
   </div>
       <div class="carousel-item">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-        <img class="d-block w-100" src="../../assets/Business competition-rafiki.png" width="600px" height="600px" alt="Primeiro Slide">
+        <div class="row align-items-center container-fluid">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-5">
+        <img class="d-block w-100" src="../../assets/Partnership-bro.png" width="600px" height="600px" alt="Primeiro Slide">
         </div>
-        <div class="col-md-6">
-          <h2 class="w3"><b>Microempreendedor individual</b></h2>
-          <h1 class=" w3-text-purple"><b>Principais vantagens:</b></h1>
-        <p><span class="w3-xlarge">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        <button class="w3-button w3-light-grey w3-padding-large w3-section w3-hide-small" routerLink='/registrar'>
-          <i class="fa fa-download"></i> Cadastre-se
-        </button>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-5">
+          <h2 class="w3"><b>Microempreendedor individual</b></h2> 
+          <h2 class=" w3-text mb-3" style="color: darkorange;"><b>Principais vantagens:</b></h2>
+      <!-- <div class="w3-left-align w3-justify vantagens"> --> 
+          <p class="mb-1">CNPJ, dispensa de alvará e licença para suas atividades;</p>
+          <p class="mb-1">Terá acesso a produtos e serviços bancários como crédito;</p>
+          <p class="mb-1"> Baixo custo mensal de tributos (INSS, ISS e ICMS) em valores fixos;</p>
+          <p class="mb-1"> Vai poder emitir nota fiscal;</p>
+          <p class="mb-1"> Direitos e benefícios previdenciários;</p>
+          <p class="mb-1"> Acesso a apoio técnico do SEBRAE</p>
+        <button class="b w3-button w3-light-grey w3-padding-large w3-section w3-hide-small align-items-center" routerLink='/dicas'><h4> Dicas 💡 </h4></button>
         </div>
         </div>
       </div>
       <div class="carousel-item">
-        <div class="row align-items-center">
+        <div class="row align-items-center container-fluid">
           <div class="col-md-6">
-            <h2 class="w3"><b><img src="../../assets/7a0a3056-5816-4093-b522-b4fa1ad058c5-removebg-preview.png" width="90px" alt=""></b></h2>
-      <button class="w3-button w3-light-grey w3-padding-large w3-section w3-hide-small align-items-center"  id="botaocadastro" routerLink='/registrar'>
-       <h3 class="align-items-center">Cadastre-se</h3>
+            <h2 class="w3"><b><img src="../../assets/7a0a3056-5816-4093-b522-b4fa1ad058c5-removebg-preview.png" width="190px" height="190px"></b></h2>
+      <button class="w3-button w3-light-grey w3-padding-large w3-section w3-hide-small align-items-center">
+       <h3 class="align-items-center"><a href="https://github.com/projeto-aMEI" target="_blank">Visite nosso GitHub</a></h3>
       </button>
       </div>
       <div class="col-md-6">
-        <img class="d-block w-100" src="../../assets/Create-bro (1).png" alt="Segundo Slide"alt="Primeiro Slide" width="600px">
+        <img class="d-block w-100" src="../../assets/QR.png" alt="Segundo Slide"alt="Primeiro Slide" width="600px" height="600px">
       </div>
     </div>
       </div>
@@ -103,41 +88,43 @@ img {margin-bottom: -8px;}
   </div>
 </div>
 </div>
-
-<div class="w3-row w3-center w3-padding-16" id="dados">
+</div>
+<div class="w3-row w3-center w3-padding-16 w3-deep-purple" id="dado">
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    NUMERO DE MEIs
+    <span class="w3-xlarge">3.359.750</span><br>
+    empresas abertas em 2020
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    outro dado
+    <span class="w3-xlarge">2.663.309</span><br>
+    eram MEIs
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    Happy Clients
+    <span class="w3-xlarge">Mais de 11.262.383</span><br>
+    MEIs ativos
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    QUE QUEBRARAM
+    <span class="w3-xlarge">56,7%</span><br>
+    dos negócios ativos do país
   </div>
 </div>
 
 
-<div class="position-relative overflow-hidden p-md-2 m-md-2 text-center bg-light" id="FOTO">
+<div class="position-relative overflow-hidden p-md-2 m-md-2 text-center bg-transparent" id="FOTO">
 
-<div class=" w3-white container-fluid">
+<div class="container-fluid">
   <div class="w3-row-padding">
 <div class="row align-items-center">
-  <div class="col-md-6">
-<img class="d-block w-100" src="../../assets/Partnership-bro.png" alt="Primeiro Slide">
+  <div class="col-md-5">
+<img class="d-block w-100" src="../../assets/Remote team-amico.png" alt="Primeiro Slide">
 </div>
-<div class="col-md-6" id="quemsomos">
-<img class="align-items-center mb-3 py-1" src="../../assets/XTbt2mdh-removebg-preview.png" alt="Primeiro Slide" height="85">
+<div class="col-md-2">
+</div>
+<div class="col-md-5" id="quemsomos">
+<img class="mb-3 py-1" src="../../assets/XTbt2mdh-removebg-preview.png" alt="Primeiro Slide" height="85">
 <h1 class=" w3-text-dark-blue"><b>Quem Somos?</b></h1>
 <p><span class="w3-xlarge">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
   ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-  <a class="btn btn-sm btn-outline-primary" routerLink='/sobre-nos'>Conheça os Representantes</a>
+<div class="d-flex justify-content-center"><a class="btn btn-sm btn-outline-primary" routerLink='/sobre-nos' id="botaorep">Conheça os Representantes</a></div>
 </div>
 </div>
 </div>

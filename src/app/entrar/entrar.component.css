@@ -1,5 +1,4 @@
-
-#back {
+body {
 
   min-height: 100%;
   background-attachment: fixed;
@@ -7,22 +6,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("../../assets/mei-microempreendedor-individual-780x405-638x331.png");
-  min-height: 400px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#dados{
-  background-color: rgb(75, 23, 124);
-  color: aliceblue;
-}
-
 
 #modalentrar{
   height: 460px;
@@ -41,15 +24,42 @@ border-radius: 10px;
 
 }
 
+.b{
+  height: 50px;
+  border-radius: 10px;
+}
+
 
 .fs-25 {
   font-size: 18px;
-  color:rgb(75, 23, 124);
-  border-color: rgb(75, 23, 124);
+  color:#280370;
+  border-color: #280370;
   border-radius: 10px;
 
 }
 
 .fs-25:hover{
-  background-color: rgb(75, 23, 124);
+  background-color: #280370;
+}
+
+#botaorep{
+  height: 60px;
+  width: 346px;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  color:#280370;
+  border-color: #280370;
+  border-radius: 10px;
+}
+#botaorep:hover{
+    background-color: #280370;
+
+    color: aliceblue;
+  }
+.btn-sm:hover{
+
+  color: aliceblue;
 }

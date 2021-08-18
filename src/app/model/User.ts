@@ -1,6 +1,6 @@
 import { Postagem } from "./Postagem";
 
-export class User{
+export class User {
   public id: number;
   public nome: string;
   public razaoSocial: string;
@@ -8,9 +8,6 @@ export class User{
   public senha: string;
   public descricaoPerfil: string;
   public dataNascimento: Date;
-  public postagem: Postagem[]; //array/lista de postagens , varias postagens para um usuario relação ManytoOne
+  public postagem: Postagem[];
   public foto: string;
-  public tipo: string;
-  //public admin: boolean
-
 }

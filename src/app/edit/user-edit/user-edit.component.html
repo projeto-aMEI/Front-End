@@ -1,60 +1,110 @@
 <app-menu-feed></app-menu-feed>
 
-<div class="container mb-5 mt-5">
+<div class="container-fluid bg-cz pl-5 pr-5">
 
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="text-center text-sencondary">Atualizar meu usuário</h1>
-    </div>
-  </div>
+<div class="container bootstrap snippets bootdey">
+<div class="row">
 
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-10">
-
-      <div class="form-group">
-            <label for="nome">Nome</label>
-            <input  [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
+  <div class="profile-nav col-md-3">
+      <div class="panel">
+        
+        <div class="card">
+          <div class="user-heading round ">
+              <img class="card-img-top rounded-circle" src="{{foto}}">
+              <h1 class="mt-2"><strong>{{nome}}</strong></h1>
+              <p>{{email}}</p>
+              <p>{{razaoSocial}}</p>
           </div>
-           <div class="form-group">
-            <label for="nome">Razão Social</label>
-            <input [(ngModel)]='user.razaoSocial' class="form-control" type="text" name="razaoSocial" id="razaoSocial" placeholder="Digite a razão social do seu negócio">
-          </div>
-
-          <div class="form-group">
-            <label for="usuario">E-mail</label>
-            <input [(ngModel)]='user.email' class="form-control" type="mail" name="email" id="email" placeholder="Digite seu usuário">
-          </div>
-
-         <div class="form-group">
-            <label for="foto">Foto de Perfil</label>
-            <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
-          </div>
-
-          <div class="form-group">
-            <label for="senha">Senha</label>
-            <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Digite sua senha">
-          </div>
-
-          <div class="form-group">
-            <label for="senhaConfirma">Confirmar Senha</label>
-            <input [(ngModel)]='user.senha' class="form-control" type="password" name="senhaConfirma" id="senhaConfirma"
-              placeholder="Confirme sua senha">
+          <ul class="nav nav-pills nav-stacked">
+              <li><a routerLink='/meuPerfil'> <i class="fa fa-user"></i> Meu Perfil</a></li>
+              <li class="active"><a [routerLink]="['/user-edit', id]"> <i class="fa fa-edit"></i> Editar Perfil</a></li>
+          </ul>
+        </div>
+          
+          <div class="card mt-3">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                <h6 class="mb-0"><i class="fa fa-github" aria-hidden="true"></i> Github</h6>
+                <span class="text-secondary">@{{nome}}</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                <h6 class="mb-0" ><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</h6>
+                <span class="text-secondary">@{{nome}}</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="form-group">
-            <label for="foto">Descrição do perfil</label>
-            <textarea [(ngModel)]='user.descricaoPerfil' id="descricaoPerfil" name="descricaoPerfil" class="form-control" rows="4"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="foto">Data de nascimento</label>
-            <input [(ngModel)]='user.dataNascimento' class="form-control" type="date" name="dataNascimento" id="dataNascimento" placeholder="Digite sua senha">
-          </div>
-
-      <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-danger mr-4" routerLink='/inicio'>Cancelar</button>
-        <button type="submit" class="btn btn-success" (click)='atualizar()' >Atualizar</button>
       </div>
-
-    </div>
   </div>
+
+  <!-- Informações do Usuário -->
+  <div class="profile-info col-md-9">
+      <div class="panel bg-white">
+
+          <div class="bio-graph-heading">
+            <h2>Atualize seu Perfil</h2> 
+          </div> 
+          <div class="panel-body bio-graph-info">
+            <div class="mb-3">
+              <h6><strong>Foto de Perfil</strong></h6>
+              <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
+            </div>
+              <div class="row">
+                <div class="bio-row">
+                  <h6><strong>Nome</strong></h6>
+                  <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" 
+                    placeholder="Digite seu nome completo">
+                </div>
+                <div class="bio-row">
+                  <h6><strong>Sobrenome</strong></h6>
+                  <p>Smith</p>
+                </div>
+                <div class="bio-row">
+                  <h6><strong>Razão Social</strong></h6>
+                  <input [(ngModel)]='user.razaoSocial' class="form-control" type="text" name="razaoSocial" id="razaoSocial" 
+                    placeholder="Digite a razão social do seu negócio">
+                </div>
+                <div class="bio-row">
+                  <h6><strong>Email</strong></h6>
+                  <input [(ngModel)]='user.email' class="form-control" type="mail" name="email" id="email" 
+                    placeholder="Digite seu usuário">
+                </div>
+                <div class="bio-row">
+                  <h6><strong>Número</strong></h6>
+                  <p>(12) 03 4567890</p>
+                </div>
+                <div class="bio-row">
+                  <h6><strong>Data de Nascimento</strong></h6>
+                  <input [(ngModel)]='user.dataNascimento' class="form-control" type="date" name="dataNascimento" id="dataNascimento" 
+                    placeholder="Digite sua senha">
+                </div>
+                <hr>
+                <div class="bio-row">
+                  <h6><strong>Descrição</strong></h6>
+                  <textarea [(ngModel)]='user.descricaoPerfil' id="descricaoPerfil" name="descricaoPerfil" class="form-control" rows="4"></textarea>
+                </div>     
+                <div class="bio-row">
+                  <h6><strong>Senha</strong></h6>
+                  <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+                    placeholder="Digite sua senha">
+                  <hr>
+                  <h6><strong>Confirme sua Senha</strong></h6>
+                  <input [(ngModel)]='user.senha' class="form-control" type="password" name="senhaConfirma" id="senhaConfirma"
+                    placeholder="Confirme sua senha">
+                </div>    
+
+              </div>
+          </div>
+          
+          <div class="d-flex justify-content-center pb-3">
+            <button type="submit" class="btn btn-danger mr-4" routerLink='/meuPerfil'>Cancelar</button>
+            <button type="submit" class="btn btn-success" (click)='atualizar()'>Atualizar</button>
+          </div>
+
+        </div>
+  </div>
+
+</div>
+</div>
+
 </div>
