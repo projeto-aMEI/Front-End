@@ -30,7 +30,7 @@
     transform: translate(-50%, -50%);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 5px 18px #280370;
     cursor: pointer;
     transition: 0.5s;
   }
@@ -41,7 +41,7 @@
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: #000;
+    background-color: #280370;
     transition: 0.5s;
   }
   .card:hover img {
@@ -71,9 +71,9 @@
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background: rgb(89, 55, 214);
+    background: #280370;
     font-size: 23px;
-    color: white;
+    color: #fff;
     font-weight: bold;
     margin: 0 6px;
     transition: 0.4s;
@@ -85,7 +85,7 @@
     opacity: 1;
   }
   .social-icons li a:hover {
-    background: rgb(253, 194, 0);
+    background: #ff922e;
     transition: 0.2s;
   }
   .social-icons li a:hover .fab {
@@ -123,14 +123,14 @@
     padding: 10px;
   }
   .details h2 .job-title {
-    
-    font-size: 1rem;
+
+    font-size: 15px;
+    font-weight: bold;
     line-height: 2.5rem;
-    color: rgb(253, 194, 0);
-    font-weight: 300;
+    color: #ff922e;
   }
   .jane {
-    color: rgb(89, 55, 214);
+    color: #fff;
     position: absolute;
     bottom: -120px;
     left: 0;
@@ -141,7 +141,7 @@
     transition: 0.4s;
   }
   .profile-two .social-icons li a {
-    border-radius: 50%;
+    border-radius: 10px;
   }
   .card:hover .profile-img--two {
     transform: rotateY(180deg);

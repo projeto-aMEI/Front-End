@@ -1,4 +1,3 @@
-
 body {
 
   min-height: 100%;
@@ -7,7 +6,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 
 #modalentrar{
   height: 460px;
@@ -34,14 +32,14 @@ border-radius: 10px;
 
 .fs-25 {
   font-size: 18px;
-  color:rgb(93, 47, 153);
-  border-color: rgb(93, 47, 153);
+  color:#280370;
+  border-color: #280370;
   border-radius: 10px;
 
 }
 
 .fs-25:hover{
-  background-color: rgb(93, 47, 153);
+  background-color: #280370;
 }
 
 #botaorep{
@@ -52,16 +50,16 @@ border-radius: 10px;
   justify-content: center;
   align-items: center;
   justify-self: center;
-  color:rgb(93, 47, 153);
-  border-color: rgb(93, 47, 153);
+  color:#280370;
+  border-color: #280370;
   border-radius: 10px;
 }
 #botaorep:hover{
-    background-color: rgb(93, 47, 153);
+    background-color: #280370;
 
     color: aliceblue;
   }
 .btn-sm:hover{
-  
+
   color: aliceblue;
 }
