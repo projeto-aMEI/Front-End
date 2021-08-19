@@ -8,6 +8,12 @@ export class User {
   public senha: string;
   public descricaoPerfil: string;
   public dataNascimento: Date;
-  public postagem: Postagem[];
+  public postagem: Postagem[]; //array/lista de postagens , varias postagens para um usuario relação ManytoOne
   public foto: string;
+  public tipo: string;
+  public numero: string;
+  public linkedin: string;
+  public sobrenome: string;
+  public github: string;
+  //public admin: boolean
 }

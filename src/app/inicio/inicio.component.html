@@ -13,6 +13,7 @@
 
                   <div class="card-body">
                     <h5 class="card-title">{{nome}}</h5>
+                    <p class="card-text"><small class="text-muted">{{razaoSocial}}</small></p>
                     <p class="card-text">{{descricaoPerfil}}</p>
                   </div>
 
@@ -50,10 +51,10 @@
           </div>
 
           <!-- div rolagem infinita -->
-          <div *ngFor='let item of listaPostagens | orderBy : key : reverse' class="card d-flex p-4 mt-3 rounded bg-light" style="width: 700px" >
+          <div *ngFor='let item of listaPostagens | orderBy : key : reverse' class="card d-flex  rounded bg-light mt-5" style="width: 700px" >
 
-              <div class="card-body">
-                <h5 class="card-title"><img src="{{item.usuario.foto}}" width="45px" height="45px" class="circle"> {{item.usuario.nome}}</h5>
+              <div class="card-body p-4 mt-3">
+                <h5 class="card-title"><img src="{{item.usuario.foto}}" width="45px" height="45px" class="circle"><a style="text-decoration: none;" *ngIf="item.usuario.id != id"  [routerLink]="['/usuario', item.usuario.id]"> {{item.usuario.nome}}</a><a class="card-title text-dark" style="text-decoration: none;" *ngIf="item.usuario.id == id"> {{item.usuario.nome}}</a></h5>
 
                 <p class="card-text"><small class="text-muted">{{item.tema.nome}}</small></p>
 
@@ -63,14 +64,32 @@
                 <p class="card-title">{{item.descricaoPost}}</p>
                 <p class="card-text"><small class="text-muted">{{item.hashtag}}</small></p>
 
-                <img class="card-img-top" src="{{item.imgpost}}"   alt="Imagem de capa do card">
+                <img *ngIf="item.imgpost != null" class="card-img-top" src="{{item.imgpost}}"   alt="Imagem de capa do card">
                 <p class="card-text mt-3">
                   <button (click)='getPostagemById(item.id)' (click)='curtida(item.id)' class="btn"><i class="fa fa-heart text-roxo" aria-hidden="true"></i></button>
                   <b>Amei's:</b> {{item.curtidas}}
-                  <!--<button (click)='getPostagemById(item.id)' (click)='descurtida(item.id)' class="btn"><i class="fa fa-heart text-roxo"  aria-hidden="true"></i></button>-->
-
                 </p>
+                <h5 class="card-text text-center ">Entre em contato comigo :D</h5>
               </div>
+
+                <div class="row m-0 p-0 text-center">
+
+                  <ul class="list-inline col-md-12">
+                    <li class="list-inline col-md-4 border">
+                      <h6 class="mb-0"><i class="fa fa-github" aria-hidden="true"></i> Github</h6>
+                      <span class="text-secondary"><a (click)="btnGithub(item.usuario.github)" style="cursor: pointer;" >@{{item.usuario.nome}}</a></span>
+                    </li>
+                    <li class="list-inline col-md-4 border">
+                      <h6 class="mb-0" ><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</h6>
+                      <span class="text-secondary"><a (click)="btnLinkedin(item.usuario.linkedin)" style="cursor: pointer;" >@{{item.usuario.nome}}</a></span>
+                    </li>
+                    <li class="list-inline col-md-4 border">
+                      <h6 class="mb-0" ><i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp</h6>
+                      <span class="text-secondary"><a (click)="btnWhatsapp(item.usuario.numero, item.usuario.nome)" style="cursor: pointer;" >Me chame :)</a></span>
+                    </li>
+                  </ul>
+                </div>
+
 
           </div>
       </div>

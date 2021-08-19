@@ -10,17 +10,21 @@
   <div class="container shadow bg-cz">
   <div class="row d-flex align-items-center flex-wrap justify-content-center text-center">
 
-    
+
     <div class="col-md-12 bg-wh">
       <div class="row d-flex justify-content-center">
         <div class="col-md-8 bg-wh pt-5 pb-4">
-       
+
           <h1 class="text-center align-self-center pb-0 mt-0">Faça seu cadastro</h1>
           <p class="fs-18"><span class="w3-xlarge">Seja agora um membro da plataforma aMEI 😍</span></p>
 
           <div class="form-group">
             <label for="nome">Nome</label>
-            <input  [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
+            <input  [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome">
+          </div>
+          <div class="form-group">
+            <label for="sobrenome">Sobrenome</label>
+            <input  [(ngModel)]='user.sobrenome' class="form-control" type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome">
           </div>
            <div class="form-group">
             <label for="nome">Razão Social</label>
@@ -31,7 +35,18 @@
             <label for="usuario">E-mail</label>
             <input [(ngModel)]='user.email' class="form-control" type="mail" name="email" id="email" placeholder="Digite seu usuário">
           </div>
-
+          <div class="form-group">
+            <label for="numero">Número de celular (com códido do país e DDD)</label>
+            <input [(ngModel)]='user.numero' class="form-control" type="number" name="numero" id="numero" placeholder="Digite seu número">
+          </div>
+          <div class="form-group">
+            <label for="linkedin">LinkedIn</label>
+            <input [(ngModel)]='user.linkedin' class="form-control" type="text" name="linkedin" id="linkedin" placeholder="Link do seu LinkedIn">
+          </div>
+          <div class="form-group">
+            <label for="github">GitHub</label>
+            <input [(ngModel)]='user.github' class="form-control" type="text" name="github" id="github" placeholder="Link do seu Github">
+          </div>
          <div class="form-group">
             <label for="foto">Foto de Perfil</label>
             <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">

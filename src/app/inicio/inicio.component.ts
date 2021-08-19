@@ -37,8 +37,15 @@ export class InicioComponent implements OnInit {
 
   //Dados usuario do card
   nome = environment.nome
+  email = environment.email
   foto = environment.foto
   descricaoPerfil = environment.descricaoPerfil
+  dataNascimento = environment.dataNascimento
+  razaoSocial = environment.razaoSocial
+  sobrenome = environment.sobrenome
+  numero = environment.numero
+  github = environment.github
+  linkedin = environment.linkedin
 
   //ordena as postagens
   key = 'data'
@@ -152,5 +159,24 @@ export class InicioComponent implements OnInit {
       this.getAllPostagens()
     })
   }
+  //contato
 
+  btnWhatsapp(id: string, titulo2: string){
+    let usuario = id
+    let titulo = titulo2
+    window.open('https://wa.me/' + usuario + '?text='  + 'Olá ' + titulo + ' vi você no aMEI, e queria iniciar uma conversa :D', "_blank")
+  }
+
+  btnLinkedin(id: string){
+    let usuario = id
+    window.open(usuario)
+  }
+
+  btnGithub(id: string){
+    let usuario = id
+    window.open(usuario)
+  }
 }
+
+
+

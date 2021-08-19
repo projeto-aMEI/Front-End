@@ -38,6 +38,10 @@ export class MeuPerfilComponent implements OnInit {
   descricaoPerfil = environment.descricaoPerfil
   dataNascimento = environment.dataNascimento
   razaoSocial = environment.razaoSocial
+  sobrenome = environment.sobrenome
+  numero = environment.numero
+  github = environment.github
+  linkedin = environment.linkedin
 
   //ordena as postagens
   key = 'data'
@@ -99,6 +103,22 @@ export class MeuPerfilComponent implements OnInit {
       this.postagem = new Postagem()
       this.getAllPostagens()
     })
+  }
+
+  btnWhatsapp(id: string, titulo2: string){
+    let usuario = id
+    let titulo = titulo2
+    window.open('https://wa.me/' + usuario + '?text='  + 'Olá ' + titulo + ' vi você no aMEI, e queria iniciar uma conversa :D', "_blank")
+  }
+
+  btnLinkedin(id: string){
+    let usuario = id
+    window.open(usuario)
+  }
+
+  btnGithub(id: string){
+    let usuario = id
+    window.open(usuario)
   }
 
   //Pesquisa de publicações, ainda não implementado
