@@ -33,12 +33,12 @@ export class MeuPerfilComponent implements OnInit {
 
   //Dados usuario do card
   nome = environment.nome
+  sobrenome = environment.sobrenome
   email = environment.email
   foto = environment.foto
   descricaoPerfil = environment.descricaoPerfil
   dataNascimento = environment.dataNascimento
   razaoSocial = environment.razaoSocial
-  sobrenome = environment.sobrenome
   numero = environment.numero
   github = environment.github
   linkedin = environment.linkedin
@@ -105,18 +105,18 @@ export class MeuPerfilComponent implements OnInit {
     })
   }
 
-  btnWhatsapp(id: string, titulo2: string){
+  btnWhatsapp(id: string, titulo2: string) {
     let usuario = id
     let titulo = titulo2
-    window.open('https://wa.me/' + usuario + '?text='  + 'Olá ' + titulo + ' vi você no aMEI, e queria iniciar uma conversa :D', "_blank")
+    window.open('https://wa.me/' + usuario + '?text=' + 'Olá ' + titulo + ' vi você no aMEI, e queria iniciar uma conversa :D', "_blank")
   }
 
-  btnLinkedin(id: string){
+  btnLinkedin(id: string) {
     let usuario = id
     window.open(usuario)
   }
 
-  btnGithub(id: string){
+  btnGithub(id: string) {
     let usuario = id
     window.open(usuario)
   }

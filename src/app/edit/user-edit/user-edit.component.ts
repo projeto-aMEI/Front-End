@@ -20,8 +20,10 @@ export class UserEditComponent implements OnInit {
   id = environment.id
 
   nome = environment.nome
+  sobrenome = environment.sobrenome
   email = environment.email
   foto = environment.foto
+  numero = environment.numero
   descricaoPerfil = environment.descricaoPerfil
   dataNascimento = environment.dataNascimento
   razaoSocial = environment.razaoSocial

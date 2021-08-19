@@ -20,19 +20,6 @@
               <li class="active"><a [routerLink]="['/user-edit', id]"> <i class="fa fa-edit"></i> Editar Perfil</a></li>
           </ul>
         </div>
-          
-          <div class="card mt-3">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                <h6 class="mb-0"><i class="fa fa-github" aria-hidden="true"></i> Github</h6>
-                <span class="text-secondary">@{{nome}}</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                <h6 class="mb-0" ><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</h6>
-                <span class="text-secondary">@{{nome}}</span>
-              </li>
-            </ul>
-          </div>
 
       </div>
   </div>
@@ -53,25 +40,27 @@
                 <div class="bio-row">
                   <h6><strong>Nome</strong></h6>
                   <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome" 
-                    placeholder="Digite seu nome completo">
+                    placeholder="Nome">
                 </div>
                 <div class="bio-row">
                   <h6><strong>Sobrenome</strong></h6>
-                  <p>Smith</p>
+                  <input [(ngModel)]='user.sobrenome' class="form-control" type="text" name="sobrenome" id="sobrenome" 
+                    placeholder="Sobrenome">
                 </div>
                 <div class="bio-row">
                   <h6><strong>Razão Social</strong></h6>
                   <input [(ngModel)]='user.razaoSocial' class="form-control" type="text" name="razaoSocial" id="razaoSocial" 
-                    placeholder="Digite a razão social do seu negócio">
+                    placeholder="Razão social do seu negócio">
                 </div>
                 <div class="bio-row">
                   <h6><strong>Email</strong></h6>
                   <input [(ngModel)]='user.email' class="form-control" type="mail" name="email" id="email" 
-                    placeholder="Digite seu usuário">
+                    placeholder="Email">
                 </div>
                 <div class="bio-row">
                   <h6><strong>Número</strong></h6>
-                  <p>(12) 03 4567890</p>
+                  <input [(ngModel)]='user.numero' class="form-control" type="text" name="numero" id="numero" 
+                    placeholder="55169912345678">
                 </div>
                 <div class="bio-row">
                   <h6><strong>Data de Nascimento</strong></h6>
@@ -92,7 +81,17 @@
                   <input [(ngModel)]='user.senha' class="form-control" type="password" name="senhaConfirma" id="senhaConfirma"
                     placeholder="Confirme sua senha">
                 </div>    
-
+                <hr>
+                <div class="bio-row">
+                  <h6><strong>LinkedIn</strong></h6>
+                  <input [(ngModel)]='user.linkedin' class="form-control" type="text" name="linkedin" id="linkedin" 
+                    placeholder="Link do seu LinkedIn">
+                </div>
+                <div class="bio-row">
+                  <h6><strong>Github</strong></h6>
+                  <input [(ngModel)]='user.github' class="form-control" type="text" name="github" id="github" 
+                    placeholder="Link do seu Github">
+                </div> 
               </div>
           </div>
           
