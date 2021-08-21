@@ -15,5 +15,4 @@ export class User {
   public linkedin: string;
   public sobrenome: string;
   public github: string;
-  //public admin: boolean
 }
