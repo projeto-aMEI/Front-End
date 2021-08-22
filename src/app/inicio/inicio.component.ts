@@ -164,7 +164,7 @@ export class InicioComponent implements OnInit {
   btnWhatsapp(id: string, titulo2: string){
     let usuario = id
     let titulo = titulo2
-    window.open('https://wa.me/' + usuario + '?text='  + 'Olá ' + titulo + ' vi você no aMEI, e queria iniciar uma conversa :D', "_blank")
+    window.open('https://wa.me/' + usuario + '?text='  + 'Olá, ' + titulo + '! Vi você no aMEI, e queria iniciar uma conversa :D', "_blank")
   }
 
   btnLinkedin(id: string){
@@ -177,6 +177,3 @@ export class InicioComponent implements OnInit {
     window.open(usuario)
   }
 }
-
-
-

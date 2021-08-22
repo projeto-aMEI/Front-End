@@ -1,14 +1,9 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
   .texto{
     font-size: 38pt;
   }
   .body {
     font-family: "Open Sans", sans-serif;
-    background: rgb(89, 55, 214);
+    background: #280370;
   }
   .container {
     max-width: 1400px;
@@ -55,6 +50,8 @@
   /**** Social Icons *****/
   .social-icons {
     position: absolute;
+    justify-content: center;
+    align-content: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
