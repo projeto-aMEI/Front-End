@@ -17,6 +17,10 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
+  getAllUsuarios(): Observable<User[]> {
+    return this.http.get<User[]>('https://amei3.herokuapp.com/usuarios/todos')
+  }
+
   entrar(userLogin: UserLogin): Observable <UserLogin>{
     return this.http.post<UserLogin>('https://amei3.herokuapp.com/usuarios/logar', userLogin)
   }

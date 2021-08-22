@@ -29,6 +29,8 @@ export class InicioComponent implements OnInit {
 
   user: User = new User()
   idUser = environment.id
+  listaUsuarios: User[]
+
 
   //Pesquisa postagem
 
@@ -69,8 +71,14 @@ export class InicioComponent implements OnInit {
 
     this.getAllTemas()
     this.getAllPostagens()
+    this.getAllUsuarios()
   }
 
+  getAllUsuarios(){
+    this.authService.getAllUsuarios().subscribe((resp: User[]) => {
+      this.listaUsuarios = resp
+    })
+  }
   //exibir todos os temas
   getAllTemas() {
     this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
@@ -177,3 +185,4 @@ export class InicioComponent implements OnInit {
     window.open(usuario)
   }
 }
+
