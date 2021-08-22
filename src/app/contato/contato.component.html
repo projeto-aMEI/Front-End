@@ -1,26 +1,33 @@
-  <div class="col-md-9">
-  <div class="contact-form">
-    <form>
+<div class="container-fluid justify-content-center d-flex">
+  <div class="contact-form" id="contato">
+
+    <form action="https://api.staticforms.xyz/submit" method="POST">
       <h3>Envie-nos uma mensagem</h3>
       <div class="row">
+
+        <input type="hidden" name="accessKey" value="5dcf1666-3916-424c-bec9-10b4fea77eee">
+
         <div class="col-md-7">
           <div class="form-group">
-            <input type="text" name="txtName" class="form-control" placeholder="Seu nome *" value="" />
+            <input type="text" name="name" id="inputNome" class="form-control" placeholder="seu nome*" />
           </div>
           <div class="form-group">
-            <input type="text" name="txtEmail" class="form-control" placeholder="Seu e-mail *" value="" />
+            <input type="email" name="email" id="inputEmail" class="form-control" placeholder="seu e-mail*" />
           </div>
           <div class="form-group">
-            <input type="submit" name="btnSubmit" class="btnContact" value="Enviar" />
+            <input class="btnContact" type="submit" value="Enviar" />
           </div>
         </div>
+
         <div class="col-md-5">
           <div class="form-group">
-            <textarea name="txtMsg" class="form-control" placeholder="Sua mensagem *"
+            <textarea name="message" class="form-control" id="textareaMensagem" placeholder="sua mensagem*"
               style="width: 270px; height: 160px;"></textarea>
           </div>
         </div>
+
       </div>
     </form>
+
   </div>
 </div>

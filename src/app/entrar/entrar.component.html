@@ -4,150 +4,350 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size: 16px;}
-img {margin-bottom: -8px;}
-.mySlides {display: none;}
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Poppins", sans-serif
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  img {
+    margin-bottom: -8px;
+  }
+
+  .mySlides {
+    display: none;
+  }
 </style>
 
 <app-menu></app-menu>
 
+<!-- Carrosel do começo-->
 <div class="container-fluid">
+
+  <!-- carrosel com imagens -->
   <div class="position-relative overflow-hidden p-md-2 m-md-2 text-center bg-transparent" id="FOTO">
-  <div class="text-center bg-transparent" id="FOTO">
-  <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row align-items-center container">
-          <div class="col-md-1">
+    <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+
+        <!-- primeiro carrosel -->
+        <div class="carousel-item active">
+          <div class="row align-items-center container">
+
+            <div class="col-md-5">
+
+              <p class="sub"><span class="w3-xlarge">A <b>primeira</b> rede social dedicada ao Microempreendedor
+                  Individual.</span></p>
+
+              <p>Aqui você pode divulgar o seu trabalho ou prestação de serviço, conhecer outros empreendedores,
+                trocar experiências e encontrar várias dicas para administrar ou implementar seu empreendedorismo!</p>
+
+              <div class="d-flex justify-content-center">
+                <a class="btn btn-sm btn-outline-primary" routerLink='/registrar' id="link">Crie uma conta</a>
+              </div>
+
+            </div>
+
+            <div class="col-md-5">
+              <img src="../../assets/Connected-cuate.png" alt="Primeiro Slide" width="600px">
+            </div>
+
           </div>
-          <div class="col-md-5">
-              <p class="sub"><span class="w3-xlarge">A <b>primeira</b> rede social dedicada ao Microempreendedor Individual.</span></p>
+        </div>
 
-              <p>Aqui você pode divulgar o seu trabalho ou prestação de serviço, conhecer outros empreendedores, trocar experiências e encontrar várias dicas para administrar ou implementar seu empreendedorismo!</p>
-      <div class="d-flex justify-content-center">
-        <a class="btn btn-sm btn-outline-primary" routerLink='/registrar' id="link">Criar uma conta</a>
-       </div><!--fecha botao-->
+        <!-- segundo carrosel -->
+        <div class="carousel-item">
+          <div class="row align-items-center container">
 
+            <div class="col-md-5">
+              <img class="d-block w-100" src="../../assets/Partnership-bro.png" width="600px" height="600px"
+                alt="Primeiro Slide">
+            </div>
 
+            <div class="col-md-5">
+              <h2 class="w3"><b>Microempreendedor Individual</b></h2>
+              <h2 class=" w3-text mb-3"><b class="sub">Principais vantagens:</b></h2>
+
+              <p class="mb-1"> - CNPJ, dispensa de alvará e licença para suas atividades</p>
+              <p class="mb-1"> - Terá acesso a produtos e serviços bancários como crédito</p>
+              <p class="mb-1"> - Baixo custo mensal de tributos (INSS, ISS e ICMS) em valores fixos</p>
+              <p class="mb-1"> - Vai poder emitir nota fiscal</p>
+              <p class="mb-1"> - Direitos e benefícios previdenciários</p>
+              <h6><i>*informações extraídas do site <b>SEBRAE</b></i></h6>
+
+              <div class="d-flex justify-content-center">
+                <a class="btn btn-sm btn-outline-primary" id="link" data-toggle="modal" data-target="#entrar">
+                  Leia mais dicas</a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- terceiro carrosel -->
+        <div class="carousel-item">
+          <div class="row align-items-center container-fluid">
+
+            <div class="col-md-6">
+              <h2 class="w3"><b><img src="../../assets/7a0a3056-5816-4093-b522-b4fa1ad058c5-removebg-preview.png"
+                    width="200px" height="200px"></b></h2>
+              <br>
+              <div class="d-flex justify-content-center">
+                <a class="btn btn-sm btn-outline-primary" id="link" href="https://github.com/projeto-aMEI"
+                  target="_blank">Visite nosso GitHub</a>
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+              <img class="d-block w-100" src="../../assets/QR.png" width=" 600px" height="600px">
+            </div>
+
+          </div>
+        </div>
 
       </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-5">
-   <img src="../../assets/Connected-cuate.png" alt="Primeiro Slide" width="600px">
-      </div>
+
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+
     </div>
   </div>
-      <div class="carousel-item">
-        <div class="row align-items-center container-fluid">
-          <div class="col-md-1">
-          </div>
-          <div class="col-md-5">
-        <img class="d-block w-100" src="../../assets/Partnership-bro.png" width="600px" height="600px" alt="Primeiro Slide">
-        </div>
-        <div class="col-md-1">
-        </div>
-        <div class="col-md-5">
-          <h2 class="w3"><b>Microempreendedor Individual</b></h2> 
-          <h2 class=" w3-text mb-3"><b class="sub">Principais vantagens:</b></h2>
-      <!-- <div class="w3-left-align w3-justify vantagens"> --> 
-          <p class="mb-1"> - CNPJ, dispensa de alvará e licença para suas atividades;</p>
-          <p class="mb-1"> - Terá acesso a produtos e serviços bancários como crédito;</p>
-          <p class="mb-1"> - Baixo custo mensal de tributos (INSS, ISS e ICMS) em valores fixos;</p>
-          <p class="mb-1"> - Vai poder emitir nota fiscal;</p>
-          <p class="mb-1"> - Direitos e benefícios previdenciários.*</p>
-          <h6><i>*informações extraídas do site <b>SEBRAE</b></i></h6>
 
-          <div class="d-flex justify-content-center">
-            <a class="btn btn-sm btn-outline-primary" routerLink='/dicas' id="link" target="_blank">Leia mais dicas</a>
-           </div><!--fecha botao-->
+</div>
 
-        </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row align-items-center container-fluid">
-          <div class="col-md-6">
-            <h2 class="w3"><b><img src="../../assets/7a0a3056-5816-4093-b522-b4fa1ad058c5-removebg-preview.png" width="200px" height="200px"></b></h2>
-           <br>
-            <div class="d-flex justify-content-center">
-              <a class="btn btn-sm btn-outline-primary" id="link" href="https://github.com/projeto-aMEI" target="_blank">Visite nosso GitHub</a>
-             </div><!--fecha botao-->
-      </div>
-   
-
-      <div class="col-md-6">
-        <img class="d-block w-100" src="../../assets/QR.png" alt="Segundo Slide"alt="Primeiro Slide" width="600px" height="600px">
-      </div>
-    </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Próximo</span>
-    </a>
-  </div>
-</div>
-</div>
-</div>
+<!-- Barra com os dados -->
 <div class="w3-row w3-center w3-padding-16 w3-deep-purple" id="dado">
+
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">3.359.750</span><br>
     empresas abertas em 2020
   </div>
+
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">2.663.309</span><br>
     eram MEIs
   </div>
+
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">Mais de 11.262.383</span><br>
     MEIs ativos
   </div>
+
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">56,7%</span><br>
     dos negócios ativos do país
   </div>
-</div>
-
-
-<div class="position-relative overflow-hidden p-md-2 m-md-2 text-center bg-transparent" id="FOTO">
-
-<div class="container-fluid">
-  <div class="w3-row-padding">
-<div class="row align-items-center">
-  <div class="col-md-5">
-<img class="d-block w-100" src="../../assets/Remote team-amico.png" alt="Primeiro Slide">
-</div>
-<div class="col-md-2">
-</div>
-<div class="col-md-5" id="quemsomos">
-<img class="mb-3 py-1" src="../../assets/XTbt2mdh-removebg-preview.png" alt="Primeiro Slide" height="200">
-<h1 class=" w3-text-dark-blue"><b>Sobre nós</b></h1>
-<h4>O projeto <b>aMEI</b> foi desenvolvido durante o bootcamp <br> de 12 semanas da Generation Brasil.</h4>
-<br>
-<div class="d-flex justify-content-center"><a class="btn btn-sm btn-outline-primary" routerLink='/sobre-nos' id="botaorep">Conheça os Desenvolvedores</a></div>
-</div>
-</div>
-</div>
-</div>
 
 </div>
-<div id="contato"></div>
+
+<!-- sobrenos -->
+<div class="position-relative overflow-hidden p-md-2 m-md-2 text-center bg-transparent" id="quemsomos">
+
+  <div class="container-fluid">
+    <div class="w3-row-padding">
+      <div class="row align-items-center">
+        <div class="col-md-5">
+          <img class="d-block w-100" src="../../assets/Remote team-amico.png" alt="Primeiro Slide">
+        </div>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-5">
+          <img class="mb-3 py-1" src="../../assets/XTbt2mdh-removebg-preview.png" alt="Primeiro Slide" height="200">
+          <h1 class=" w3-text-dark-blue"><b>Sobre nós</b></h1>
+          <h4>O projeto <b>aMEI</b> foi desenvolvido durante o bootcamp <br> de 12 semanas da Generation Brasil.</h4>
+          <br>
+
+          <a class="btn btn-sm btn-outline-primary" data-toggle="collapse" href="#sobreNos" role="button"
+            aria-expanded="false" aria-controls="sobreNos">
+            Conheça os Desenvolvedores!
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- collapse do sobrenos -->
+<div class="collapse bg-light" id="sobreNos">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-12 p-0">
+
+      <div class="container">
+
+        <!--mari-->
+        <div class="card-wrapper">
+          <div class="card profile-two">
+            <div class="card-image profile-img--two">
+              <img src="https://github.com/marianac-campos.png" alt="profile two" width="300" height="300">
+            </div>
+            <ul class="social-icons">
+              <li>
+                <a href="https://github.com/marianac-campos" target="_blank">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/mariana-campos-br/" target="_blank">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+            <div class="details jane">
+              <h2>Mariana Campos
+                <br>
+                <span class="job-title">Dev. FullStack Java Jr.</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <!--zé-->
+        <div class="card-wrapper">
+          <div class="card profile-two">
+            <div class="card-image profile-img--two">
+              <img src="https://github.com/xnildo.png" alt="profile two" width="300" height="300">
+            </div>
+            <ul class="social-icons">
+              <li>
+                <a href="https://github.com/xnildo" target="_blank">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/ze-nildo-pereira-a64202212/" target="_blank">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+            <div class="details jane">
+              <h2>Zé Nildo
+                <br>
+                <span class="job-title">Dev. FullStack Java Jr. </span>
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <!--muniz-->
+        <div class="card-wrapper">
+          <div class="card profile-two">
+            <div class="card-image profile-img--two">
+              <img src="https://github.com/gumunizs.png" alt="profile two" width="300" height="300">
+            </div>
+            <div class="details jane">
+              <h2>Gustavo Muniz
+                <br>
+                <span class="job-title">Dev. FullStack Java Jr.</span>
+              </h2>
+            </div>
+            <ul class="social-icons">
+              <li>
+                <a href="https://github.com/gumunizs" target="_blank">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/gustavo-muniz-santos-089550165/" target="_blank">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container">
+
+        <!--talu-->
+        <div class="card-wrapper">
+          <div class="card profile-two">
+            <div class="card-image profile-img--two">
+              <img src=" https://github.com/t4lu.png" alt="profile two" width="300" height="300">
+            </div>
+            <ul class="social-icons">
+              <li>
+                <a href="https://github.com/t4lu" target="_blank">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/t4lu/" target="_blank">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+            <div class="details jane">
+              <h2>Talu
+                <br>
+                <span class="job-title">Dev. FullStack Java Jr.</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <!--João -->
+        <div class="card-wrapper">
+          <div class="card profile-two">
+
+            <div class="card-image profile-img--two">
+              <img src="https://github.com/joaovitormo.png" alt="profile two" width="300" height="300">
+            </div>
+            <ul class="social-icons">
+              <li>
+                <a href="https://github.com/joaovitormo" target="_blank">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-mendes-71b2321a0/" target="_blank">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+            <div class="details jane">
+              <h2>João Vitor
+                <br>
+                <span class="job-title">Dev. FullStack Java Jr. </span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <app-contato></app-contato>
 <app-rodape></app-rodape>
 
 <!-- Modal para o Login -->
 <div class="modal fade" id="entrar" role="dialog" aria-labelledby="modalLogin" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="log" >
+  <div class="modal-dialog modal-dialog-centered" role="log">
 
     <div class="modal-content ">
       <div class="bg-white rounded" id="modalentrar">
@@ -163,25 +363,28 @@ img {margin-bottom: -8px;}
             <div class="modal-body">
               <div class="form-group">
                 <input [(ngModel)]='userLogin.email' class="form-control" type="text" name="usario" id="usuario"
-                placeholder="Digite seu email">
+                  placeholder="Digite seu email">
               </div>
 
               <div class="form-group">
                 <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" id="senha"
-                placeholder="Digite sua senha">
+                  placeholder="Digite sua senha">
               </div>
 
-                <button type="submit" class="btn btn-success mr-4 form-control" (click)="entrar()" data-dismiss="modal" aria-label="Close">Entrar</button>
+              <button type="submit" class="btn btn-success mr-4 form-control" (click)="entrar()" data-dismiss="modal"
+                aria-label="Close">Entrar</button>
 
-                <hr class="mt-4 mb-4">
+              <hr class="mt-4 mb-4">
 
-                <p class="text-center">
-                  Não tem uma conta?<a routerLink="/registrar" data-dismiss="modal"> Cadastre-se</a>!
-                </p>
+              <p class="text-center">
+                Não tem uma conta?<a routerLink="/registrar" data-dismiss="modal"> Cadastre-se</a>!
+              </p>
             </div>
+
           </div>
         </div>
 
+      </div>
     </div>
 
   </div>
