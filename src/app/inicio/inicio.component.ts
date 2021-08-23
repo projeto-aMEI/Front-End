@@ -9,6 +9,7 @@ import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -27,9 +28,13 @@ export class InicioComponent implements OnInit {
   idTema: number
   nomeTema: string
 
+
   user: User = new User()
   idUser = environment.id
   listaUsuarios: User[]
+
+
+
 
 
   //Pesquisa postagem
@@ -69,9 +74,11 @@ export class InicioComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
 
+
     this.getAllTemas()
     this.getAllPostagens()
     this.getAllUsuarios()
+    //this.fotoNull()
   }
 
   getAllUsuarios(){
@@ -92,6 +99,13 @@ export class InicioComponent implements OnInit {
       this.tema = resp
     })
   }
+
+  /*fotoNull(){
+    if(this.foto == '') {
+      this.foto = ('https://www.camargoecamposrh.com.br/wp-content/uploads/2017/05/default-user.png')
+      console.log(this.foto)
+    }
+  }*/
 
   //Exibir publicacoes
   getAllPostagens() {
@@ -172,7 +186,7 @@ export class InicioComponent implements OnInit {
   btnWhatsapp(id: string, titulo2: string){
     let usuario = id
     let titulo = titulo2
-    window.open('https://wa.me/' + usuario + '?text='  + 'Olá, ' + titulo + '! Vi você no aMEI, e queria iniciar uma conversa :D', "_blank")
+    window.open('https://wa.me/55' + usuario + '?text='  + 'Olá, ' + titulo + '! Vi você no aMEI, e queria iniciar uma conversa :D', "_blank")
   }
 
   btnLinkedin(id: string){

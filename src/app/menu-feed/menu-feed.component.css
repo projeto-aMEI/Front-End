@@ -193,3 +193,18 @@ a.text-muted:focus {
 .bg-cz {
   background-color:#eee;
 }
+
+.input-search {
+  background-color:#280370;
+  color:#fff;
+  outline: none;
+  border:2px solid #fff
+}
+
+.input-search:focus {
+  outline: none;
+}
+
+.input-search::placeholder{
+  color:#fff;
+}

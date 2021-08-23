@@ -42,3 +42,18 @@
     cursor: pointer;
     transition: 0.2s;
 }
+
+.input-search {
+  background-color:#280370;
+  color:#fff;
+  outline: none;
+  border:2px solid #fff
+}
+
+.input-search:focus {
+  outline: none;
+}
+
+.input-search::placeholder{
+  color:#fff;
+}

@@ -10,7 +10,6 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { MenuComponent } from './menu/menu.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { RegistrarComponent } from './registrar/registrar.component';
-import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { ContatoComponent } from './contato/contato.component';
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
@@ -33,7 +32,6 @@ import { UsuarioComponent } from './usuario/usuario.component';
     MenuComponent,
     EntrarComponent,
     RegistrarComponent,
-    SobreNosComponent,
     ContatoComponent,
     InicioComponent,
     TemaComponent,

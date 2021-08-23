@@ -46,7 +46,7 @@ export class EntrarComponent implements OnInit {
       console.log(environment.token)
       console.log(environment.nome)
       console.log(environment.descricaoPerfil)
-      
+      console.log(environment.foto)
       // console.log(environment.razaoSocial)
 
       this.router.navigate(['/inicio'])
